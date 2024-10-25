@@ -4,10 +4,49 @@ body {
     padding: 0;
 }
 
+
 header {
+    position: relative;
     background: #f8f8f8;
     padding: 20px;
     text-align: center;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.slide img {
+    width: 100%;
+    height: 95%;
+}
+button {
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+main {
+    padding: 20px;
 }
 
 nav ul {
@@ -32,11 +71,10 @@ main {
 
 .product, .cart-item {
     border: 1px solid #ccc;
-    margin: 15px;
+    margin: 15px 0;
     padding: 20px;
-	width: calc(25% - 30px); /* 4个商品并排，每个商品宽度减去边距 */
+	width: calc(25% - 30px); 
 	box-sizing: border-box;
-	
 }
 
 
@@ -44,4 +82,11 @@ footer {
     text-align: center;
     padding: 20px;
     background: #f8f8f8;
+}
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
 }
