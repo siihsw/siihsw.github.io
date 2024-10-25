@@ -1,92 +1,79 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-
-header {
-    position: relative;
-    background: #f8f8f8;
-    padding: 20px;
-    text-align: center;
-}
-
-.slider {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-}
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-.slide img {
-    width: 100%;
-    height: 95%;
-}
-button {
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
-}
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-main {
-    padding: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-main {
-    padding: 20px;
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电商首页</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
 	
-}
-.products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+    <header>
+		<h1>WELCOM TO OUR WEBSITE!</h1>
+		<nav>
+		    <ul>
+		        <li><a href="Yindex.html">首页</a></li>
+		        <li><a href="./products.html">产品</a></li>
+		        <li><a href="./cart.html">购物车</a></li>
+				<li><a href="https://shop254477178.world.taobao.com/?spm=a230r.7195193.1997079397.2.32e16f030C64zc">
+				欢迎关注我的tb店铺👏🏻</a>
+				</li>
+		    </ul>
+		</nav>
+		
+        <div class="slider">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="vintage.jpg" alt="图片1">
+                </div>
+                <div class="slide">
+                    <img src="vintage1.jpg" alt="图片2">
+                </div>
+                <div class="slide">
+                    <img src="vintage2.png" alt="图片3">
+                </div>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
 
-.product, .cart-item {
-    border: 1px solid #ccc;
-    margin: 15px 0;
-    padding: 20px;
-	width: calc(25% - 30px); 
-	box-sizing: border-box;
-}
+
+    </header>
+    <main>
+        <h2>热门商品</h2>
+
+        <div class="products-container">
+            <div class="product">
+                <h3>手工diy浪漫植绒玫瑰花材料包串珠荷叶瓶抖音装饰花束摆件教师节</h3>
+                <p>销量：500+</p>
+                <p>价格: ¥18.8</p>
+                <button>加入购物车</button>
+            </div>
+            <div class="product">
+                <h3>三只松鼠蜀香牛肉100gx2袋麻辣牛肉干零熟食休闲小吃解馋香辣即食</h3>
+                <p>销量：500+</p>
+                <p>价格: ¥28.8</p>
+                <button>加入购物车</button>
+            </div>
+            <div class="product">
+                <h3>卫生间架子置物架落地式浴室三角架夹缝收纳神器厕所马桶转角储物</h3>
+                <p>销量：500+</p>
+                <p>价格: ¥49</p>
+                <button>加入购物车</button>
+            </div>
+            <div class="product">
+                <h3>创意挂墙钟表2024高档挂钟客厅现代简约挂表网红时尚家用时钟挂式</h3>
+                <p>销量：500+</p>
+                <p>价格: ¥98.8</p>
+                <button>加入购物车</button>
+            </div>
+        </div>
 
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #f8f8f8;
-}
-@media (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin: 5px 0;
-    }
-
-}
+    </main>
+    <footer>
+        <p>&copy; 2024 YESAYES</p>
+    </footer>
+</body>
+</html>
