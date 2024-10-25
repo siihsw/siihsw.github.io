@@ -11,6 +11,8 @@ header {
     padding: 20px;
     text-align: center;
 }
+.background-image {
+    background-image: url('picture.jpg'); 
 
 .slider {
     position: relative;
